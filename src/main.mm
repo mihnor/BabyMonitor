@@ -3,6 +3,11 @@
 
 int main(){
 
+    //ofAppiPhoneWindow * iOSWindow = new ofAppiPhoneWindow();
+    //iOSWindow->enableRetinaSupport();
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+
+    
     bool bUseNative = true;
     
     if (bUseNative){
@@ -20,6 +25,8 @@ int main(){
          **/
         
         ofAppiPhoneWindow *window = new ofAppiPhoneWindow();
+        window->enableRetinaSupport();                      //set retina enable here
+        
         ofSetupOpenGL(ofPtr<ofAppBaseWindow>(window), 1024,768, OF_FULLSCREEN);
         window->startAppWithDelegate("MyAppDelegate");
     }

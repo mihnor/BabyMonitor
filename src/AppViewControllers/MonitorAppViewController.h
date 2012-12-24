@@ -5,6 +5,6 @@
 
 #import "ofxiPhoneViewController.h"
 
-@interface CircleAppViewController : ofxiPhoneViewController
+@interface MonitorAppViewController : ofxiPhoneViewController
 
 @end

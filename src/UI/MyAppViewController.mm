@@ -8,14 +8,14 @@
 #import "SquareAppViewController.h"
 #import "SquareApp.h"
 
-#import "CircleAppViewController.h"
-#import "CircleApp.h"
+#import "CameraAppViewController.h"
+#import "CameraApp.h"
 
 #import "TriangleAppViewController.h"
 #import "TriangleApp.h"
 
-#import "ImageAppViewController.h"
-#import "ImageApp.h"
+#import "MonitorAppViewController.h"
+#import "MonitorApp.h"
 
 @implementation MyAppViewController
 
@@ -145,12 +145,12 @@
 }
 
 - (void)button2Pressed:(id)sender {
-    CircleAppViewController *viewController;
-    viewController = [[[CircleAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
-                                                                 app:new CircleApp()] autorelease];
+    CameraAppViewController *viewController;
+    viewController = [[[CameraAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
+                                                                 app:new CameraApp()] autorelease];
     
     [self.navigationController pushViewController:viewController animated:YES];
-    self.navigationController.navigationBar.topItem.title = @"CircleApp";
+    self.navigationController.navigationBar.topItem.title = @"CameraApp";
 }
 
 - (void)button3Pressed:(id)sender {
@@ -163,12 +163,12 @@
 }
 
 - (void)button4Pressed:(id)sender {
-    ImageAppViewController *viewController;
-    viewController = [[[ImageAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
-                                                                app:new ImageApp()] autorelease];
+    MonitorAppViewController *viewController;
+    viewController = [[[MonitorAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
+                                                                app:new MonitorApp()] autorelease];
     
     [self.navigationController pushViewController:viewController animated:YES];
-    self.navigationController.navigationBar.topItem.title = @"ImageApp";
+    self.navigationController.navigationBar.topItem.title = @"MonitorApp";
 }
 
 - (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -180,9 +180,9 @@
 
 -(void)launchMonitorApp:(UIButton*)button{
     
-    ImageAppViewController *viewController;
-    viewController = [[[ImageAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
-                                                                app:new ImageApp()] autorelease];
+    MonitorAppViewController *viewController;
+    viewController = [[[MonitorAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
+                                                                app:new MonitorApp()] autorelease];
     
     [self.navigationController pushViewController:viewController animated:YES];
     self.navigationController.navigationBar.topItem.title = @"Monitor";    
@@ -191,9 +191,9 @@
 
 -(void)launchCameraApp:(UIButton*)button{
     
-    TriangleAppViewController *viewController;
-    viewController = [[[TriangleAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
-                                                                   app:new TriangleApp()] autorelease];
+    CameraAppViewController *viewController;
+    viewController =[[[CameraAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
+                                                                   app:new CameraApp()] autorelease];
     
     [self.navigationController pushViewController:viewController animated:YES];
     self.navigationController.navigationBar.topItem.title = @"Camera";

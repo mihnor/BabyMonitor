@@ -1,17 +1,17 @@
-#include "ImageApp.h"
+#include "MonitorApp.h"
 
 //--------------------------------------------------------------
-ImageApp :: ImageApp () {
-    cout << "creating ImageApp" << endl;
+MonitorApp :: MonitorApp () {
+    cout << "creating MonitorApp" << endl;
 }
 
 //--------------------------------------------------------------
-ImageApp :: ~ImageApp () {
-    cout << "destroying ImageApp" << endl;
+MonitorApp :: ~MonitorApp () {
+    cout << "destroying MonitorApp" << endl;
 }
 
 //--------------------------------------------------------------
-void ImageApp::setup() {	
+void MonitorApp::setup() {	
 	ofBackground(127);
     
     int fontSize = 8;
@@ -24,12 +24,12 @@ void ImageApp::setup() {
 }
 
 //--------------------------------------------------------------
-void ImageApp::update(){
+void MonitorApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::draw() {
+void MonitorApp::draw() {
     int x = (ofGetWidth()  - image.width)  * 0.5;
     int y = (ofGetHeight() - image.height) * 0.5;
     int p = 0;
@@ -49,53 +49,53 @@ void ImageApp::draw() {
 }
 
 //--------------------------------------------------------------
-void ImageApp::exit() {
+void MonitorApp::exit() {
     //
 }
 
 //--------------------------------------------------------------
-void ImageApp::touchDown(ofTouchEventArgs &touch){
+void MonitorApp::touchDown(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::touchMoved(ofTouchEventArgs &touch){
+void MonitorApp::touchMoved(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::touchUp(ofTouchEventArgs &touch){
+void MonitorApp::touchUp(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::touchDoubleTap(ofTouchEventArgs &touch){
+void MonitorApp::touchDoubleTap(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::lostFocus(){
+void MonitorApp::lostFocus(){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::gotFocus(){
+void MonitorApp::gotFocus(){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::gotMemoryWarning(){
+void MonitorApp::gotMemoryWarning(){
 
 }
 
 //--------------------------------------------------------------
-void ImageApp::deviceOrientationChanged(int newOrientation){
+void MonitorApp::deviceOrientationChanged(int newOrientation){
 
 }
 
 
 //--------------------------------------------------------------
-void ImageApp::touchCancelled(ofTouchEventArgs& args){
+void MonitorApp::touchCancelled(ofTouchEventArgs& args){
 
 }
 

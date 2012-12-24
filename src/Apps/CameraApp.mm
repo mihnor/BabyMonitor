@@ -1,17 +1,17 @@
-#include "CircleApp.h"
+#include "CameraApp.h"
 
 //--------------------------------------------------------------
-CircleApp :: CircleApp () {
-    cout << "creating CircleApp" << endl;
+CameraApp :: CameraApp () {
+    cout << "creating CameraApp" << endl;
 }
 
 //--------------------------------------------------------------
-CircleApp :: ~CircleApp () {
-    cout << "destroying CircleApp" << endl;
+CameraApp :: ~CameraApp () {
+    cout << "destroying CameraApp" << endl;
 }
 
 //--------------------------------------------------------------
-void CircleApp::setup() {
+void CameraApp::setup() {
 	ofBackground(127);
     
     int fontSize = 8;
@@ -22,12 +22,12 @@ void CircleApp::setup() {
 }
 
 //--------------------------------------------------------------
-void CircleApp::update(){
+void CameraApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::draw() {
+void CameraApp::draw() {
     int x = ofGetWidth()  * 0.5;
     int y = ofGetHeight() * 0.5;
     int r = MIN(ofGetWidth(), ofGetHeight()) * 0.3;
@@ -48,53 +48,53 @@ void CircleApp::draw() {
 }
 
 //--------------------------------------------------------------
-void CircleApp::exit() {
+void CameraApp::exit() {
     //
 }
 
 //--------------------------------------------------------------
-void CircleApp::touchDown(ofTouchEventArgs &touch){
+void CameraApp::touchDown(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::touchMoved(ofTouchEventArgs &touch){
+void CameraApp::touchMoved(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::touchUp(ofTouchEventArgs &touch){
+void CameraApp::touchUp(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::touchDoubleTap(ofTouchEventArgs &touch){
+void CameraApp::touchDoubleTap(ofTouchEventArgs &touch){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::lostFocus(){
+void CameraApp::lostFocus(){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::gotFocus(){
+void CameraApp::gotFocus(){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::gotMemoryWarning(){
+void CameraApp::gotMemoryWarning(){
 
 }
 
 //--------------------------------------------------------------
-void CircleApp::deviceOrientationChanged(int newOrientation){
+void CameraApp::deviceOrientationChanged(int newOrientation){
 
 }
 
 
 //--------------------------------------------------------------
-void CircleApp::touchCancelled(ofTouchEventArgs& args){
+void CameraApp::touchCancelled(ofTouchEventArgs& args){
 
 }
 

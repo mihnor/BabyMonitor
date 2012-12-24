@@ -5,6 +5,6 @@
 
 #import "ofxiPhoneViewController.h"
 
-@interface ImageAppViewController : ofxiPhoneViewController
+@interface CameraAppViewController : ofxiPhoneViewController
 
 @end

@@ -4,12 +4,12 @@
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
 
-class CircleApp : public ofxiPhoneApp {
+class CameraApp : public ofxiPhoneApp {
 	
 public:
     
-     CircleApp ();
-    ~CircleApp ();
+     CameraApp ();
+    ~CameraApp ();
     
 	void setup();
 	void update();
