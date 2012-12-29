@@ -28,11 +28,21 @@
      *
      **/
     
+    //generate 
     self.navigationController = [[UINavigationController alloc] init];
+    
+    /*
+    //image prepare
+    UIImage *navBGImage = [UIImage imageNamed:@"NavigationBar.png"];
+    if([self.navigationController.navigationBar
+        respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)] ) {
+        [self.navigationController.navigationBar setBackgroundImage:navBGImage forBarMetrics:UIBarMetricsDefault];
+    }
+    */
+    
     [self.window setRootViewController:self.navigationController];
     
     [self.navigationController pushViewController:[[[MyAppViewController alloc] init] autorelease] animated:YES];
-
     /*
     [self.navigationController pushViewController:[[[ViewController alloc] init] autorelease] animated:YES];
     */

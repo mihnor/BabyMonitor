@@ -1,5 +1,7 @@
 #include "MonitorApp.h"
 
+#define BUFSIZE (9216 * 4)
+
 //--------------------------------------------------------------
 MonitorApp :: MonitorApp () {
     cout << "creating MonitorApp" << endl;
@@ -11,16 +13,17 @@ MonitorApp :: ~MonitorApp () {
 }
 
 //--------------------------------------------------------------
-void MonitorApp::setup() {	
-	ofBackground(127);
+void MonitorApp::setup() {
+    cout << "MonitorApp::setup" << endl;
+
+    mUDPjpegReceiver.init(4054, BUFSIZE);
+    mUDPjpegReceiver.enable();
+    ofAddListener(mUDPjpegReceiver.newReceivedPixelEvent,this,&MonitorApp::onReceiveImgae);
+    mRecievedIP = "unRecieved";
     
-    int fontSize = 8;
-    if (ofxiPhoneGetOFWindow()->isRetinaSupported())
-        fontSize *= 2;
     
-    font.loadFont("fonts/mono0755.ttf", fontSize);
-    
-    image.loadImage("images/dive.jpg");
+    mOSCcommunicator.init(myOscCallBack, this);
+
 }
 
 //--------------------------------------------------------------
@@ -30,27 +33,24 @@ void MonitorApp::update(){
 
 //--------------------------------------------------------------
 void MonitorApp::draw() {
-    int x = (ofGetWidth()  - image.width)  * 0.5;
-    int y = (ofGetHeight() - image.height) * 0.5;
-    int p = 0;
     
-	ofSetColor(ofColor::white);
-    image.draw(x, y);
+    ofBackground(0);
     
-    x = ofGetWidth()  * 0.2;
-    y = ofGetHeight() * 0.11;
-    p = ofGetHeight() * 0.035;
+    mRecievedImage.draw(0, 0 , ofGetWidth(), ofGetWidth() * mRecievedImage.getHeight() / mRecievedImage.getWidth());
     
-    ofSetColor(ofColor::white);
-    font.drawString("frame num      = " + ofToString( ofGetFrameNum() ),    x, y+=p);
-    font.drawString("frame rate     = " + ofToString( ofGetFrameRate() ),   x, y+=p);
-    font.drawString("screen width   = " + ofToString( ofGetWidth() ),       x, y+=p);
-    font.drawString("screen height  = " + ofToString( ofGetHeight() ),      x, y+=p);
+    ofSetColor(255, 255, 255);
+    
+    ofDrawBitmapString("My IP :" + mOSCcommunicator.getOnwIPAddress(), 0, 150);
+    ofDrawBitmapString("Recieved from" + mRecievedIP, 0, 200);
+    ofDrawBitmapString("Recieved at" + ofToString(mLastRecievedTime), 0, 250);
+    
 }
 
 //--------------------------------------------------------------
 void MonitorApp::exit() {
     //
+    
+    cout << "MonitorApp::exit" << endl;
 }
 
 //--------------------------------------------------------------
@@ -97,5 +97,21 @@ void MonitorApp::deviceOrientationChanged(int newOrientation){
 //--------------------------------------------------------------
 void MonitorApp::touchCancelled(ofTouchEventArgs& args){
 
+}
+
+void MonitorApp::onReceiveImgae(ofkPixelsWithIP & pix)
+{
+    mRecievedImage.setFromPixels(pix);
+    mLastRecievedTime = ofGetElapsedTimeMillis();
+    mRecievedIP = pix.IP;
+}
+
+void MonitorApp::myOscCallBack(ofxOscMessage recieveMessage, void *pUserdata)
+{
+    MonitorApp *pThis = (MonitorApp *)pUserdata;
+    
+    if( recieveMessage.getAddress() == "/touch/position" )
+    {
+    }
 }
 

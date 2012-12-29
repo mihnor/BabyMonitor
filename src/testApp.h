@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
+#include "ofkXMLProperties.h"
 
 class testApp : public ofxiPhoneApp{
 	

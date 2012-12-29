@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/Apps/CameraApp.mm"
-         timestampString = "378009601.349775"
+         timestampString = "378488049.40556"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
          landmarkName = "CameraApp::draw()"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,22 +47,37 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/Apps/CameraApp.mm"
-         timestampString = "378009639.662013"
+         timestampString = "378488049.40556"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30">
+         startingLineNumber = "88"
+         endingLineNumber = "88">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "src/Apps/CameraApp.mm"
-         timestampString = "378009640.534796"
+         timestampString = "378488049.40556"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "29"
-         endingLineNumber = "29">
+         startingLineNumber = "76"
+         endingLineNumber = "76"
+         landmarkName = "CameraApp::update()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "src/Apps/CameraApp.mm"
+         timestampString = "378488049.40556"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "74"
+         endingLineNumber = "74"
+         landmarkName = "CameraApp::update()"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

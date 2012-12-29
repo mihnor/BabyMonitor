@@ -4,6 +4,9 @@
 #include "ofxiPhone.h"
 #include "ofxiPhoneExtras.h"
 
+#include "ofkUDPjpegReceiver.h"
+#include "ofkOSCcommunicator.h"
+
 class MonitorApp : public ofxiPhoneApp {
 	
 public:
@@ -27,8 +30,19 @@ public:
 	void gotMemoryWarning();
 	void deviceOrientationChanged(int newOrientation);
 
-    ofTrueTypeFont font;
-    ofImage image;
+    ofkUDPjpegReceiver mUDPjpegReceiver;
+    //
+    void onReceiveImgae(ofkPixelsWithIP & pix);
+    
+    ofImage mRecievedImage;
+    string mRecievedIP;
+    unsigned long mLastRecievedTime;
+    
+    ofkOSCcommunicator mOSCcommunicator;
+    
+    static void myOscCallBack(ofxOscMessage recieveMessage, void *pUserdata);
+ 
+    
 };
 
 

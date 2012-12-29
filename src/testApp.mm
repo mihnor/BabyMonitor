@@ -10,6 +10,9 @@ void testApp::setup(){
 	ofxAccelerometer.setup();
 	
 	ofBackground(127,127,127);
+    //SETTINGS>
+    //<SendIP
+    ofkXMLProperties::setXMLFile("mySettings.xml");
 }
 
 //--------------------------------------------------------------
